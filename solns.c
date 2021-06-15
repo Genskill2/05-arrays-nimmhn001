@@ -28,6 +28,19 @@ int min(int a[], int s){
     return mini;
 }
 
+float average(int a[], int s)
+{
+   
+    int sum = 0;
+
+    for(int i = 0; i < s; i++)
+    {
+        sum += a[i];
+    }
+
+    return (float)(sum)/s;
+}
+
 
 
 
