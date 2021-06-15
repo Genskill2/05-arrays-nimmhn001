@@ -82,4 +82,49 @@ int mode(int a[], int s)
 
 
 
+int factors(int num, int a[])
+{
+  int c = 0;
+  int primes[num] ;
+ 
+  for(int i = 0; i < num; i++)
+  {
+      primes[i] = 0;
+  }
+
+ int i = 2;
+while(i <= num)
+{
+  while(num % i == 0)
+  {
+      num = num / i;
+      primes[c] = i;
+       c++;
+  }
+
+   if(i == 2)
+        i++;
+
+    else
+    {
+        i++;
+        for(int j = 2; j < i; j++)
+        {
+            if(i % j == 0)
+                i++;
+        }
+    }
+  
+}
+
+
+for(int i = 0; i < c; i++)
+{
+    a[i] = primes[i];
+}
+
+return c;
+}
+
+
 
