@@ -15,4 +15,19 @@
     }
 
 
+int min(int a[], int s){
+
+    int  mini = a[0];
+
+    for(int i = 1; i < s; i++)
+    {
+        if(mini > a[i])
+            mini = a[i];
+    }
+    
+    return mini;
+}
+
+
+
 
