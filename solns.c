@@ -43,4 +43,43 @@ float average(int a[], int s)
 
 
 
+int mode(int a[], int s)
+{
+    int max = a[0], ans;
+
+  for(int i = 0; i < s; i++)
+  {
+      if(max < a[i])
+        max = a[i];
+  }
+
+
+  int size = max + 1;
+  int count[size];
+  
+  for(int i = 0; i < size; i++)
+  {
+      count[i] = 0;
+  }
+
+  for(int i = 0; i < s; i++)
+    count[a[i]]++;
+
+   max = count[0];
+
+    for(int i = 1; i < size; i++)
+    {
+        if(max < count[i])
+            {
+                max = count[i];
+                ans = i;
+            }
+    }
+  
+    return ans;
+
+}
+
+
+
 
